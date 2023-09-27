@@ -1,7 +1,7 @@
 'use client';
 
 import axios from "axios";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useState } from "react";
 import { toast } from "react-hot-toast";
 import { Range } from "react-date-range";
 import { useRouter } from "next/navigation";
@@ -33,54 +33,6 @@ const PostClient: React.FC<PostClientProps> = ({
   const router = useRouter();
 
   const [isLoading, setIsLoading] = useState(false);
-
-  // const onCreateReservation = useCallback(() => {
-  //     if (!currentUser) {
-  //       return loginModal.onOpen();
-  //     }
-  //     setIsLoading(true);
-
-  //     axios.post('/api/reservations', {
-  //       totalPrice,
-  //       startDate: dateRange.startDate,
-  //       endDate: dateRange.endDate,
-  //       postId: post?.id
-  //     })
-  //     .then(() => {
-  //       toast.success('Listing reserved!');
-  //       setDateRange(initialDateRange);
-  //       router.push('/trips');
-  //     })
-  //     .catch(() => {
-  //       toast.error('Something went wrong.');
-  //     })
-  //     .finally(() => {
-  //       setIsLoading(false);
-  //     })
-  // },
-  // [
-  //   totalPrice, 
-  //   dateRange, 
-  //   post?.id,
-  //   router,
-  //   currentUser,
-  //   loginModal
-  // ]);
-
-  // useEffect(() => {
-  //   if (dateRange.startDate && dateRange.endDate) {
-  //     const dayCount = differenceInDays(
-  //       dateRange.endDate, 
-  //       dateRange.startDate
-  //     );
-      
-  //     if (dayCount && post.price) {
-  //       setTotalPrice(dayCount * post.price);
-  //     } else {
-  //       setTotalPrice(post.price);
-  //     }
-  //   }
-  // }, [dateRange, post.price]);
 
   return ( 
     <Container>

@@ -83,25 +83,24 @@ const PostCard: React.FC<PostCardProps> = ({
         </div>
         <hr />
         <div className='flex flex-col md:flex-row justify-between gap-1'>
-          <div className='font-light text-neutral-500'>Author: {author}</div>
-          <div className='font-light text-neutral-500'>
+          <div className='font-light text-neutral-500 text-sm'>Author: {author}</div>
+          <div className='font-light text-neutral-500 text-sm'>
             Last updated at {modified}
           </div>
         </div>
         <div className='flex gap-4'>
-          {onActionPrimary && actionLabelPrimary && (
+          {/* {onActionPrimary && actionLabelPrimary && (
             <Button
               disabled={disabled}
               small
               label={actionLabelPrimary}
               onClick={primaryAction}
             />
-          )}
+          )} */}
           {onActionSecondary && actionLabelSecondary && (
             <Button
               disabled={disabled}
               small
-              outline
               label={actionLabelSecondary}
               onClick={secondaryAction}
             />
