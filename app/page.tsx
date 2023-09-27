@@ -14,13 +14,12 @@ interface HomeProps {
 
 const Home = async ({ searchParams }: HomeProps) => {
   const posts = await getPosts(searchParams);
-  console.log('Home',{posts})
   const currentUser = await getCurrentUser();
 
   if (posts.length === 0) {
     return (
       <ClientOnly>
-        <EmptyState showReset />
+        <EmptyState />
       </ClientOnly>
     );
   }
